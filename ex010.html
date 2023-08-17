@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            background: rgb(0, 0, 149);
+            color: whitesmoke;
+            text-align: center;
+            font-style: normal 18pt status-bar;
+            border-radius: 20px;
+            border-radius: 20px;
+            margin-top: auto;
+            
+            }
+            input {
+                background: rgb(136, 172, 233);
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px rgb(83, 92, 251);
+            }
+          
+    </style>
+</head>
+<body>
+    <strong><h1>Sistemas de multas</h1></strong>
+    <input type="number" name="txtv" id="txtv">
+    <input type="button" value="clicar" onclick="testar()">
+    <div id="res">
+        <p>
+       <strong>Resultado...</strong> 
+    </div>
+    <script>
+        function testar() {
+            var velo = document.getElementById('txtv')
+            var res = document.getElementById('res')
+            var vel = (velo.value)
+            res.innerHTML = `<p>A sua velo é de ${vel}<p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>vc esta acima da velocidade MULTADO <p>`
+            }
+            res.innerHTML += `<p>derija sempre com sinto de segurança<p>`
+        }    
+    </script>
+</body>
+</html>
