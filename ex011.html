@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origem</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0.943);
+            color: rgb(105, 105, 253);
+            font: normal 15pt arial;
+            text-align: center;
+            margin-top: auto;
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px;
+        }
+       input {
+            background: rgb(171, 171, 244);
+            color: rgb(0, 0, 0);
+            border-radius: 10px;
+            margin-top: auto;
+            box-shadow: 2px 2px 6px rgb(142, 116, 243);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Origem</h1>
+    <input type="text" name="tx" id="tx">
+    <input type="button" value="clicar" onclick="testar()">
+    <div id="res">
+        <p>
+        Resultado...
+    </div>
+    <script>
+        function testar() {
+            var txpais = document.getElementById('tx');
+            var res = document.getElementById('res');
+            var pais = (txpais.value);
+            res.innerHTML = `<p>Seu pais de origem é ${pais}!<p>`
+            if (pais === 'brasil') {
+                res.innerHTML += `Você é brasileiro`
+            } else {
+                res.innerHTML += `Você é estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
